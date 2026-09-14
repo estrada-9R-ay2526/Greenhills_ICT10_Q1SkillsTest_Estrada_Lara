@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pyscript.net/releases/2026.7.3/core.css" />
+    <script type="module" src="https://pyscript.net/releases/2026.7.3/core.js"></script>
+    <title>Skills Test</title>
+</head>
+
+<body>
+
+<div class="container">
+    <h2>iurfbnieajvn</h2><br>
+        <input type="checkbox" id="item1" value="129">
+            <label id="item1-label">Americano</label><br>
+
+        <input type="checkbox" id="item2" value="130">
+            <label id="item2-label">Matcha Latte</label><br>
+
+        <input type="checkbox" id="item3" value="130">
+            <label id="item3-label">Affogato</label><br>
+
+        <input type="checkbox" id="item4" value="135">
+            <label id="item4-label">Spanish Latte</label><br>
+
+        <button type="submit" py-click="create_order">Create Order</button><br><br>
+
+        <div id="receipt">
+            <h3>Receipt</h3>
+            <h5>Subtotal:</h5>
+            <h5>Tax:</h5>
+            <h5><b>Total:</b></h5>
+        </div>
+
+        <div id="show"></div>
+</div>
+
+    <py-script src="main.py"></py-script>
+</body>
+</html>
