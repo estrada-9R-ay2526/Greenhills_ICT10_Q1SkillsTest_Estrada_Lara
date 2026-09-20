@@ -10,32 +10,77 @@
 
 <body>
 
-<div class="container">
-    <h2>Coffee Shop</h2><br>
-        <input type="checkbox" id="item1" value="129">
-            <label id="item1-label">Americano</label><br>
+<main class="receipt-container">
 
-        <input type="checkbox" id="item2" value="130">
-            <label id="item2-label">Matcha Latte</label><br>
+    <header>
+        <h1>Menu</h1>
+    </header>
 
-        <input type="checkbox" id="item3" value="130">
-            <label id="item3-label">Affogato</label><br>
+    <form id="menuForm">
 
-        <input type="checkbox" id="item4" value="135">
-            <label id="item4-label">Spanish Latte</label><br>
+        <fieldset class="menu-items">
+            <legend>Available Items</legend>
 
-        <button type="submit" py-click="create_order">Create Order</button><br><br>
+            <div class="form-group">
+                <input type="checkbox" id="burger" value="150.00">
+                <label for="burger">Burger — ₱150.00</label>
+            </div>
 
-        <div id="receipt">
-            <h3>Receipt</h3>
-            <h5>Subtotal:</h5>
-            <h5>Tax:</h5>
-            <h5><b>Total:</b></h5>
-        </div>
+            <div class="form-group">
+                <input type="checkbox" id="fries" value="60.00">
+                <label for="fries">Fries — ₱60.00</label>
+            </div>
+
+            <div class="form-group">
+                <input type="checkbox" id="soda" value="40.00">
+                <label for="soda">Soda — ₱40.00</label>
+            </div>
+
+            <div class="form-group">
+                <input type="checkbox" id="iceCream" value="50.00">
+                <label for="iceCream">Ice Cream — ₱50.00</label>
+            </div>
+
+        </fieldset>
+
+        <section class="live-totals">
+
+            <p>
+                Subtotal:
+                <span id="displaySubtotal">₱0.00</span>
+            </p>
+
+            <p>
+                VAT (12%):
+                <span id="displayVat">₱0.00</span>
+            </p>
+
+            <p>
+                <strong>
+                    Total Amount:
+                    <span id="displayTotal">₱0.00</span>
+                </strong>
+            </p>
+
+        </section>
+
+        <button type="button" py-click="create_order" id="btnreceipt">
+            Generate Receipt
+        </button>
 
         <div id="show"></div>
-</div>
 
-    <py-script src="main.py"></py-script>
+    </form>
+
+    <hr>
+
+    <section class="receipt-output">
+        <h2>Your Receipt</h2>
+    </section>
+
+</main>
+
+<py-script src="main.py"></py-script>
+
 </body>
 </html>
